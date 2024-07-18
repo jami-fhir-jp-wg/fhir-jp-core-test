@@ -1,4 +1,4 @@
-name: JPCore FHIR develop Task 
+name: JPCore FHIR develop Task
 on:
   push:
     branches: 
@@ -23,23 +23,23 @@ jobs:
         ruby-version: ['3.0']
     environment: SSH_PORT_JPFHIR  # JAMI WG アップロードサイトに関するアクセス情報の環境名
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
     - name: Extract branch name
       run: |
         if ["${{ github.event.pull_request.head.ref }}" == ""]; then
-          echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-          echo "##[set-output name=branch_group;]$(echo ${GITHUB_REF#refs/heads/})"
+          echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
+          echo "branch_group=$(echo ${GITHUB_REF#refs/heads/})" >> $GITHUB_OUTPUT
         else
-          echo "##[set-output name=branch;]$(echo ${{ github.event.pull_request.head.ref }})"
-          echo "##[set-output name=branch_group;]$(echo 'pullrequest')"
+          echo "branch=$(echo ${{ github.event.pull_request.head.ref }})" >> $GITHUB_OUTPUT
+          echo "branch_group=$(echo 'pullrequest')" >> $GITHUB_OUTPUT
         fi
       id: extract_branch
     
     - name: Extract last commit date
       shell: bash
       run: |
-        echo "##[set-output name=date;]$(git log -1 --format="%at" | xargs -I{} date -d @{})"   
+        echo "date=$(git log -1 --format="%at" | xargs -I{} date -d @{})" >> $GITHUB_OUTPUT
       id: extract_date
 
     - uses: bluwy/substitute-string-action@v1
@@ -56,7 +56,7 @@ jobs:
         _output-file: input/landing_page/_index.yml
 
     - name: Setup npm
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v4
       with: 
         check-latest: true
 
@@ -77,24 +77,24 @@ jobs:
         file: publisher.jar
     
     - name: Download the file
-      uses: suisei-cn/actions-download-file@v1.4.0
+      uses: suisei-cn/actions-download-file@v1.6.0
       id: downloadfile1
       with:
         url: "https://jpfhir.jp/fhir/fhir_dotFHIR_packages.tgz"
         target: .
 
     - name: Download the file
-      uses: suisei-cn/actions-download-file@v1.4.0
+      uses: suisei-cn/actions-download-file@v1.6.0
       id: downloadfile2
       with:
-        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology-1.1.1.tgz"
+        url: "https://jpfhir.jp/fhir/core/terminology/jpfhir-terminology.r4-1.1.1.tgz"
         target: .    
     
     - name: Prepare for using all dependent packages including Jp modified version of hl7.fhir.r4.core Package 
       env:
         JPPACKAGECOREtgz: fhir_dotFHIR_packages.tgz
         JPTerminologyCOREdir: jpfhir-terminology#1.1.1
-        JPTerminologyCOREPtgz: jpfhir-terminology-1.1.1.tgz
+        JPTerminologyCOREPtgz: jpfhir-terminology.r4-1.1.1.tgz
       run: |
         mkdir -p /home/runner/.fhir
         mv $JPPACKAGECOREtgz /home/runner/.fhir/
@@ -167,25 +167,13 @@ jobs:
 
     - name: STEP3 = Deploy Implementation Guide
       if: success()
-      uses: peaceiris/actions-gh-pages@v3
+      uses: peaceiris/actions-gh-pages@v4
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         external_repository: jami-fhir-jp-wg/fhir-jp-core-r4-pages
         publish_branch: pages
         publish_dir: ./output
         destination_dir: ./jpcore-r4b/${{ steps.extract_branch.outputs.branch }}
-
-#    - name: STEP3 generate snapshot package using sushi -s command       
-#      run: | 
-#        rm -rf fsh-generated
-#        sushi -s .
-#        mv fsh-generated fsh-generated-snap
-#        mkdir -p forPackageRelease/snapshot/package/
-#        cp fsh-generated-snap/resources/*.json forPackageRelease/snapshot/package/
-#        cp forPackageRelease/package-${{ env.release_version}}-snap.json forPackageRelease/snapshot/package/package.json
-#        cd forPackageRelease/snapshot
-#        tar czf package-snap.tgz package
-        
 
     - name: STEP4 = generate snapshot package using sushi -s command       
       run: | 
