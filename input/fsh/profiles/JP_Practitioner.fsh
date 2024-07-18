@@ -152,7 +152,7 @@ Periodにはその資格の開始日・終了日を入力する。（例：麻�
 * qualification.code ^comment = "すべての用語の使用がこの一般的なパターンに適合するわけではない。いくつかのケースでは、モデルはCodeableConceptを使用せず、Codingを直接使用し、テキスト、コーディング、翻訳、要素間の関係、および前後の調整を管理するための独自の構造を提供することが望ましい。"
 * qualification.period ^definition = "資格が有効な期間。"
 * qualification.period ^comment = "使用のコンテキストは、範囲全体が適用されるか（例：「患者はこの時間範囲で病院の入院患者であった」）、範囲内の1つの値が適用されるか（例：「この2つの時間の間に患者に与える」）を指定する。  
-期間は、期間(経過時間の尺度)には使用されない。[Duration](http://hl7.org/fhir/R4/datatypes.html#Duration)を参照のこと。"
+期間は、期間(経過時間の尺度)には使用されない。[Duration](http://hl7.org/fhir/R4B/datatypes.html#Duration)を参照のこと。"
 * qualification.period ^requirements = "資格は期間限定のものが多く、取り消されることもある。"
 * qualification.issuer ^definition = "資格を規制し、発行する機関"
 * qualification.issuer ^comment = "参照は実際のFHIRリソースへの参照でなければならず、解決可能でなければならない。解決は URL からの検索、またはリソースタイプによって、絶対参照を正規の URL として扱い、ローカルのレジストリ/リポジトリで検索することで行うことができる。"

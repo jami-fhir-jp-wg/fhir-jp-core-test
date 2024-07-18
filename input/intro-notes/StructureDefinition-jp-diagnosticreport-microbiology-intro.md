@@ -25,7 +25,7 @@
 ## 本プロファイルの成熟度
 本プロファイルは、Trial Useとして公開する。
 微生物培養検査の結果を示すDiagnosticReportはFHIR R4でも複数の例が提示され、R5ではさらに異なる構造が例示されていることからも分かるように、複雑な構造を有している。  
-JP CoreではR4における[Micro Isolate and Sensitivities-1](https://hl7.org/fhir/R4/diagnosticreport-examples.html#10.3.7.1.1)をベースにプロファイルを作成したが、ユースケースによってはうまく整合しない場合がある可能性を否めない。  
+JP CoreではR4における[Micro Isolate and Sensitivities-1](https://hl7.org/fhir/R4B/diagnosticreport-examples.html#10.3.7.1.1)をベースにプロファイルを作成したが、ユースケースによってはうまく整合しない場合がある可能性を否めない。  
 もし問題があった場合は、どのような問題が生じたか[報告](https://github.com/jami-fhir-jp-wg/jp-core-v1x/issues)をお願いしたい。v1.2ではそれらの意見を統合した上で再検討する予定である。
 
 ## プロファイル定義

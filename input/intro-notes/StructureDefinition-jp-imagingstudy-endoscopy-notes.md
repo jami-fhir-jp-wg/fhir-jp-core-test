@@ -33,7 +33,7 @@ ImagingStudyリソースは、次の要素を持たなければならない。(*
 
 ### マッピング
 
-ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDICOM tagのマッピングについては[Resource ImagingStudy - Mappings - DICOM Tag Mapping](https://hl7.org/fhir/R4/imagingstudy-mappings.html#dicom)を参照すること。
+ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDICOM tagのマッピングについては[Resource ImagingStudy - Mappings - DICOM Tag Mapping](https://hl7.org/fhir/R4B/imagingstudy-mappings.html#dicom)を参照すること。
 
 ### reasonCode
 消化器内視鏡検査のDICOMフォーマットのデータを扱う際、ImagingStudy.reasonCodeには[JP Core ReasonCode JED ValueSet][JP_ReasonCodesJed_VS]をbindした。これは [日本消化器内視鏡学会](https://www.jges.net/)が推進する[JED (Japan Endoscopy Database) Project](https://jedproject.jges.net/)で定義されている[JED用語集](https://jedproject.jges.net/about/terms-about/)のコード集であり、このうち、基本用語集の"検査目的"、"治療目的"のコード値を設定することを強く推奨する。
@@ -52,7 +52,7 @@ ImagingStudyはDICOM tagとの対応が重要である。各エレメントとDI
 | SHOULD | patient,started | reference, date | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-25` |
 | SHOULD | patient, started, modality | reference, date, token | `GET [base]/ImagingStudy?patient=123&started=eq2021-06-18&modality=ES` |
 
-なお検索パラメターmodalityは[定義済み検索パラメーター](https://www.hl7.org/fhir/R4/searchparameter-registry.html)にseries.modalityを対象として定義されているため、ImagingStudy.modalityを対象としていないことに注意すること。
+なお検索パラメターmodalityは[定義済み検索パラメーター](https://www.hl7.org/fhir/R4B/searchparameter-registry.html)にseries.modalityを対象として定義されているため、ImagingStudy.modalityを対象としていないことに注意すること。
 またImagingStudy.modalityには値が入っていない可能性がある点にも留意すること。
 
 #### 操作詳細

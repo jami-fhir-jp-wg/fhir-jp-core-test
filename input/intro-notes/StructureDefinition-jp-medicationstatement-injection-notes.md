@@ -357,7 +357,7 @@ dosage要素の記述ルールについては、「JP Core MedicationRequest Inj
 投与情報の特記事項（コメントなど）は、note要素にAnnotation型で記述する。
 
 ## その他、参考文献・リンク等
-1. HL7, FHIR MedicationDispense Resource, [http://hl7.org/fhir/R4/medicationstatement.html](http://hl7.org/fhir/R4/medicationstatement.html)
+1. HL7, FHIR MedicationDispense Resource, [http://hl7.org/fhir/R4B/medicationstatement.html](http://hl7.org/fhir/R4B/medicationstatement.html)
 1. 保健医療福祉情報システム工業会, JAHIS 注射データ交換規約 Ver.2.1C, [https://www.jahis.jp/standard/detail/id=590](https://www.jahis.jp/standard/detail/id=590)
 1. 日本医療情報学会, 退院時サマリー HL7FHIR 記述仕様 (第1版), [https://std.jpfhir.jp/stddoc/eDischargeSummaryFHIR_v1x.pdf](https://std.jpfhir.jp/stddoc/eDischargeSummaryFHIR_v1x.pdf)
 1. 日本医療情報学会, 診療情報提供書 HL7FHIR 記述仕様 (第1版), [https://std.jpfhir.jp/stddoc/eReferralFHIR_v1x.pdf](https://std.jpfhir.jp/stddoc/eReferralFHIR_v1x.pdf)

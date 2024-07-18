@@ -134,7 +134,7 @@ textのみでの使用は基本的に不可とし、必ずcodingを設定する�
 * interpretation ^definition = "検査結果値の、（高、低、正常）といったカテゴリー評価。結果報告書に記載されることもある情報。"
 * interpretation ^comment = "【JP Core仕様】拡張可コード表「ObservationInterpretationCodes」を使用する。  
 コード表が大きいため、下記参照。  
-https://www.hl7.org/fhir/R4/valueset-observation-interpretation.html"
+https://www.hl7.org/fhir/R4B/valueset-observation-interpretation.html"
 * interpretation ^requirements = "特に数値結果については、結果の重要性を完全に理解するために解釈を必要とする場合がある。"
 * note ^definition = "検査、あるいは結果に関するコメント。フリーテキストの追加情報として使用可能。"
 * note ^comment = "May include general statements about the observation, or statements about significant, unexpected or unreliable results values, or information about its source when relevant to its interpretation."
