@@ -24,7 +24,7 @@ Description: "このプロファイルはProcedureリソースに対して、患
 【JP Core仕様】Observation_LabResultにならい、任意。"
 * partOf only Reference(JP_Procedure or JP_Observation_Common or JP_MedicationAdministration)
 * partOf ^short = "このプロシジャーが構成要素やステップとなるより大きな医療行為"
-* partOf ^definition = "【JP Core仕様】https://www.hl7.org/fhir/R4/procedure.htmlを参照"
+* partOf ^definition = "【JP Core仕様】https://www.hl7.org/fhir/R4B/procedure.htmlを参照"
 * partOf ^comment = "MedicationAdministrationリソースにはProcedureへのpartOf参照があるが、これは循環参照ではない。たとえば、麻酔MedicationAdministrationは外科的処置の一部である（MedicationAdministration.partOf = Procedure）。  
 また、たとえば、IV投薬管理用にIVポートを挿入する手順は、投薬管理の一部である（Procedure.partOf = MedicationAdministration）。  
 【JP Core仕様】Observation_LabResultにならい、任意。"
@@ -122,8 +122,8 @@ Procedure.reasonReferenceを使用して、Condition | Observation | Procedure |
 *注釈は、計算機処理れきる「変更」情報を伝達するために使用されるべきではない*。 （ユーザの行動を強制することはほとんど不可能であるため、これはSHOULDとする）。"
 * focalDevice ^short = "このプロシジャーの際に操作、埋め込み、または削除されたデバイス"
 * focalDevice ^definition = "Procedureが行われる局所に、あるいは、そこから、埋め込まれる、取り外される、またはその他の操作（キャリブレーション、バッテリー交換、プロテーゼの装着、陰圧ドレインバックの装着など）が行われるデバイス。"
-* focalDevice.action ^definition = "Procedure中にデバイスに起こった変化の種類。【JP Core仕様】https://www.hl7.org/fhir/R4/procedure.htmlを参照"
-* focalDevice.manipulated ^definition = "Procedure中に操作（変更）されたデバイス。【JP Core仕様】https://www.hl7.org/fhir/R4/procedure.htmlを参照"
+* focalDevice.action ^definition = "Procedure中にデバイスに起こった変化の種類。【JP Core仕様】https://www.hl7.org/fhir/R4B/procedure.htmlを参照"
+* focalDevice.manipulated ^definition = "Procedure中に操作（変更）されたデバイス。【JP Core仕様】https://www.hl7.org/fhir/R4B/procedure.htmlを参照"
 * usedReference only Reference(Device or JP_Medication or Substance)
 * usedReference ^short = "プロシジャー中に使用されるアイテム"
 * usedReference ^definition = "プロシジャーの一部として使用される薬剤、機器およびその他の物質を特定する。"

@@ -48,7 +48,7 @@ JP CoreとしてはsimpleObservationコード体系を必須とし、他のロ�
     antimicrobial-drug ..1 and
     jlac10 ..1
 * insert SetDefinition(code.coding, このObservationの対象を特定するコード)
-* code.coding ^comment = "【JP Core仕様】[Slicing](http://hl7.org/fhir/R4/profiling.html#slicing)を使用して複数のコード体系に対応  
+* code.coding ^comment = "【JP Core仕様】[Slicing](http://hl7.org/fhir/R4B/profiling.html#slicing)を使用して複数のコード体系に対応  
 基本方針としてカテゴリに応じた標準コードの使用を想定しているが、ローカルコードを使用してもよい"
 * code.coding[infectious-agent] from $JP_Microbiology_InfectiousAgent_VS (required)
 * code.coding[infectious-agent].system = $JP_Microbiology_InfectiousAgent_CS (exactly)
