@@ -41,6 +41,7 @@ jobs:
       run: |
         echo "date=$(git log -1 --format="%at" | xargs -I{} date -d @{})" >> $GITHUB_OUTPUT
         pull_request_title=$(echo "${{ github.event.pull_request.title }}" | sed 's/\[/【/g; s/\]/】/g')
+        echo $pull_request_title
       id: extract_date
 
     - uses: bluwy/substitute-string-action@v1
@@ -53,7 +54,7 @@ jobs:
         date: ${{ steps.extract_date.outputs.date }}
         actor: ${{ github.actor }}
         pullrequest_url: ${{ github.event.pull_request.html_url }}
-        pullrequest_title: $pull_request_title
+        pullrequest_title: ${{ pull_request_title }}
         _output-file: input/landing_page/_index.yml
 
     - name: Setup npm
