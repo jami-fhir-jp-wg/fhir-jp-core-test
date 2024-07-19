@@ -8,11 +8,11 @@ Patient リソースは、次の要素を持たなければならない。
 
 JP Patient リソースで使用される拡張は次の通りである。
 
-- [religion](https://hl7.org/fhir/R4/extension-patient-religion.html)
+- [religion](https://hl7.org/fhir/R4B/extension-patient-religion.html)
 
   - 患者の宗教を表す
 
-- [birthPlace](https://hl7.org/fhir/R4/extension-patient-birthplace.html)
+- [birthPlace](https://hl7.org/fhir/R4B/extension-patient-birthplace.html)
 
   - 患者の生誕地を表す。Address型を使って表現するため、すべての住所情報あるいは、都道府県名のみの情報(Address.state)だけを格納するということも可能である
 
@@ -20,7 +20,7 @@ JP Patient リソースで使用される拡張は次の通りである。
 
   - 患者の人種に関する情報を表す
 
-- [nameRepresentationUse](https://hl7.org/fhir/R4/extension-iso21090-en-representation.html)
+- [nameRepresentationUse](https://hl7.org/fhir/R4B/extension-iso21090-en-representation.html)
 
   - 患者氏名(Patient.name)の漢字表記・カナ表記識別のために使用する
 

@@ -34,7 +34,7 @@
 ### text
 
 依頼情報や患者基本情報などを含むレポート全体のデータは、presentedForm要素に、base64で符号化されたバイナリデータとして格納される。
-そのため、主にレポートの見読性と検索性の向上を目的に、DiagnosticReportのDomainResourceの1つであるtext要素に、所見を中心としたhuman-readableな[narrative](https://www.hl7.org/fhir/R4/narrative.html)データを格納することを推奨する。
+そのため、主にレポートの見読性と検索性の向上を目的に、DiagnosticReportのDomainResourceの1つであるtext要素に、所見を中心としたhuman-readableな[narrative](https://www.hl7.org/fhir/R4B/narrative.html)データを格納することを推奨する。
 (レポートの詳細はpresentedForm要素に格納されるレポート本体での確認を前提とする)
 
 ### category
@@ -55,7 +55,7 @@
 
 ### 時間の指定
 
-このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](https://www.hl7.org/fhir/R4/datatypes.html#dateTime)で格納する。
+このプロファイルのリソースでは、effective[x]エレメントにはレポート作成時間を[dateTime](https://www.hl7.org/fhir/R4B/datatypes.html#dateTime)で格納する。
 
 
 ### 参照画像
@@ -72,13 +72,13 @@
 
 | コンフォーマンス | パラメータ | 型 | 説明 | 表現型 |　例　|
 | --- | --- | --- | --- | --- | --- |
-| MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4/servicerequest.html)) | GET [base]/DiagnosticReport?based-on=ServiceRequest/12345 |
+| MAY | based-on | reference | オーダ情報への参照 | DiagnosticReport.basedOn ([ServiceRequest](https://hl7.org/fhir/R4B/servicerequest.html)) | GET [base]/DiagnosticReport?based-on=ServiceRequest/12345 |
 | SHOULD | category | token | レポート種別 | DiagnosticReport.category ([JP Core DiagnosticReport Category ValueSet][JP_DiagnosticReportCategory_VS]) (デフォルト：[LP7796-8](https://loinc.org/LP7796-8/)) | GET [base]/DiagnosticReport?category=LP7796-8 |
 | SHOULD | code | token | レポート全体を示すコード | DiagnosticReport.code ([JP Core DocumentCodes Endoscopy ValueSet][JP_DocumentCodes_Endoscopy_VS])  | GET [base]/DiagnosticReport?code=18751-8 |
-| MAY | conclusionCode | token | 内視鏡診断レポートの要約結論 | DiagnosticReport.conclusionCode ([JP Core Conclusion Code JED ValueSet][JP_ConclusionCodesJed_VS])  | GET [base]/DiagnosticReport?conclusionCode=Z2B32104 |
+| MAY | conclusion | token | 内視鏡診断レポートの要約結論 | DiagnosticReport.conclusionCode ([JP Core Conclusion Code JED ValueSet][JP_ConclusionCodesJed_VS])  | GET [base]/DiagnosticReport?conclusion=Z2B32104 |
 
 
-なお、検索パラメータは複合的に利用できる。詳細は[Search - Chained parameters](https://www.hl7.org/fhir/R4/search.html#chaining)を参照すること。
+なお、検索パラメータは複合的に利用できる。詳細は[Search - Chained parameters](https://www.hl7.org/fhir/R4B/search.html#chaining)を参照すること。
 
 　例：
 ```

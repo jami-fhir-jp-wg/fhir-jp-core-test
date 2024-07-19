@@ -305,7 +305,7 @@ dosage要素の記述ルールについては、MedicationRequestリソースを
 * 隔日投与、曜日指定投与
 
 ## その他、参考文献・リンク等
-1. HL7, FHIR MedicationDispense Resource, [http://hl7.org/fhir/R4/medicationstatement.html](http://hl7.org/fhir/R4/medicationstatement.html)
+1. HL7, FHIR MedicationDispense Resource, [http://hl7.org/fhir/R4B/medicationstatement.html](http://hl7.org/fhir/R4B/medicationstatement.html)
 1. 保健医療福祉情報システム工業会, JAHIS電子版お薬手帳データフォーマット仕様書Ver.2.4, [https://www.jahis.jp/standard/detail/id=715](https://www.jahis.jp/standard/detail/id=715)
 1. 日本医療情報学会, 退院時サマリー HL7FHIR 記述仕様 (第1版), [https://std.jpfhir.jp/stddoc/eDischargeSummaryFHIR_v1x.pdf](https://std.jpfhir.jp/stddoc/eDischargeSummaryFHIR_v1x.pdf)
 1. 日本医療情報学会, 診療情報提供書 HL7FHIR 記述仕様 (第1版), [https://std.jpfhir.jp/stddoc/eReferralFHIR_v1x.pdf](https://std.jpfhir.jp/stddoc/eReferralFHIR_v1x.pdf)

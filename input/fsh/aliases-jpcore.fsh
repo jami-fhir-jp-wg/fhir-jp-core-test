@@ -128,6 +128,7 @@ Alias: $JP_ConditionDiseaseOutcomeJHSD0006_CS = http://jpfhir.jp/fhir/core/CodeS
 Alias: $JP_ConditionDiseaseOutcomeReceipt_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseOutcomeReceipt_CS
 Alias: $JP_ConditionSeverity_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionSeverity_CS
 Alias: $JP_Department_SsMix_CS = urn:oid:1.2.392.200250.2.2.2
+Alias: $JP_DiseaseICD10_CS = http://jpfhir.jp/fhir/core/mhlw/CodeSystem/ICD10-2013-full
 Alias: $JP_DocumentCodes_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_CS
 Alias: $JP_EndoscopyTerminologyCodesJED_CS = urn:oid:1.2.392.200270.4.1000.1
 Alias: $JP_JfagyFoodAllergen_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_JfagyFoodAllergen_CS
@@ -200,8 +201,6 @@ Alias: $JP_Undefined_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_Undefined_CS
 Alias: $JP_ChemotherapyRegimen_RegimenType_CS = http://jpfhir.jp/fhir/core/CodeSystem/JP_ChemotherapyRegimen_RegimenType_CS
 
 // ValueSet
-
-
 Alias: $JP_AllergyIntolerance_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
 Alias: $JP_ConclusionCodesJed_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
 Alias: $JP_ConditionDiseaseCodeICD10_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
@@ -221,6 +220,7 @@ Alias: $JP_Department_SsMix2Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_D
 Alias: $JP_Department_SsMix3Digits_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix3Digits_VS
 Alias: $JP_Department_SsMix_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_Department_SsMix_VS
 Alias: $JP_DiagnosticReportCategory_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DiagnosticReportCategory_VS
+Alias: $JP_DiseaseICD10_VS = http://jpfhir.jp/fhir/core/mhlw/ValueSet/ICD10-2013-full_VS
 Alias: $JP_DocumentCodes_DiagnosticReport_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_DiagnosticReport_VS
 Alias: $JP_DocumentCodes_Endoscopy_VS = http://jpfhir.jp/fhir/core/ValueSet/JP_DocumentCodes_Endoscopy_VS
 Alias: $JP_DocumentCodes_VS = http://jpfhir.jp/fhir/core/CodeSystem/JP_DocumentCodes_VS

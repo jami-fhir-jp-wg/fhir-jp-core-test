@@ -26,23 +26,23 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 | コンフォーマンス | パラメータ    | 型     | 例                                                           |
 | ---------------- | ------------- | ------ | ------------------------------------------------------------ |
 | SHALL            | identifier | token  | GET [base]/Coverage?identifier=***
-| SHOULD           | beneficiary   | 	reference  | GET [base]/Coverage?beneficiary=*** |
+| SHOULD           | beneficiary   | reference  | GET [base]/Coverage?beneficiary=*** |
 | SHOULD           | class-type    | token | GET [base]/Coverage?class-type=*** |
 | SHOULD           | class-value | string  | GET [base]/Coverage?class-value=*** |
 | SHOULD           | dependent | string  | GET [base]/Coverage?dependent=*** |
-| SHOULD           | patient | reference  | GET [base]/Coverage?beneficiary=Patient/*** |
+| SHOULD           | patient | reference  | GET [base]/Coverage?patient=Patient/*** |
 | SHOULD           | payor | reference  | GET [base]/Coverage?payor=*** |
 | SHOULD           | policy-holder | reference  | GET [base]/Coverage?policy-holder=*** |
 | SHOULD           | status | token  | GET [base]/Coverage?status=*** |
 | SHOULD           | subscriber | reference  | GET [base]/Coverage?subscriber=*** |
-| SHOULD           | type | token  | GET [base]/Coverage?token=*** |
+| SHOULD           | type | token  | GET [base]/Coverage?type=*** |
 
 ##### 必須検索パラメータ
 
 1. identifier 検索パラメータを使用して、識別子によるCoverageの検索をサポートしなければならない（**SHALL**）
 
    ```
-   GET [base]/Coverage?identifier={system|}[code]
+   GET [base]/Coverage?identifier={system|}[token]
    ```
 
    例：
@@ -60,7 +60,7 @@ JP Core Coverage プロファイルで使用される拡張は次の通りであ
 1. beneficiary 検索パラメータを使用して、識別子によるCoverageの検索をサポートすることが望ましい（**SHOULD**）
 
    ```
-   GET [base]/Coverage?beneficiary={system|}[code]
+   GET [base]/Coverage?beneficiary=[reference]
    ```
 
    例：

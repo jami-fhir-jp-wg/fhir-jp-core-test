@@ -108,7 +108,7 @@ GET [base]/ImagingStudy?patient={reference}&started={date}
 GET [base]/ImagingStudy?patient=123&started=eq2021-06-25
 ```
 1. 複数の条件を組み合わせた検索：対象患者（= Patientリソース）、撮影の日時、撮影に使用されたモダリティ、撮影の対象となった撮影部位を条件とした検索をサポートすることが望ましい  
-なお検索パラメターmodalityは[定義済み検索パラメーター](https://www.hl7.org/fhir/R4/searchparameter-registry.html)にseries.modalityを対象として定義されているため、ImagingStudy.modalityを対象としていないことに注意すること  
+なお検索パラメターmodalityは[定義済み検索パラメーター](https://www.hl7.org/fhir/R4B/searchparameter-registry.html)にseries.modalityを対象として定義されているため、ImagingStudy.modalityを対象としていないことに注意すること  
 ```
 GET [base]/ImagingStudy?patient={reference}&started={date}&modality={token}&bodysite={token}
 ```
