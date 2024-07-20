@@ -71,7 +71,8 @@ TBD
 
 #### サンプル
 
-* [**病名（過敏性大腸炎の初期疾患）**][jp-condition-diagnosis-example-1]
+<!-- * [**病名（過敏性大腸炎の初期疾患）**][jp-condition-diagnosis-example-1] -->
+TBD
 
 ## 注意事項
 
