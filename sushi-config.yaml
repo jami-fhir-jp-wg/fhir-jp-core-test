@@ -131,6 +131,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/CodeSystem/JHSI0003
     - http://jpfhir.jp/fhir/core/CodeSystem/JHSP0002
     - http://jpfhir.jp/fhir/core/CodeSystem/JHSP0007
+    - http://jpfhir.jp/fhir/core/CodeSystem/JP_ChemotherapyRegimen_RegimenType_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD10_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeICD11_CS
     - http://jpfhir.jp/fhir/core/CodeSystem/JP_ConditionDiseaseCodeReceipt_CS
@@ -200,6 +201,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_InsuranceOrganizationNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Organization_PrefectureNo
     - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Patient_Race
+    - http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_PlanDefinition_ChemotherapyRegimen_RegimenType
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSubNumber_SP
     - http://jpfhir.jp/fhir/core/SearchParameter/JP_Coverage_InsuredPersonSymbol_SP
@@ -234,6 +236,7 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Location
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Media_Endoscopy
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication
+    - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Medication_ChemotherapyRegimen
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministration_Injection
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_MedicationAdministrationBase
@@ -273,7 +276,9 @@ parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ResearchSubject
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_ServiceRequest
     - http://jpfhir.jp/fhir/core/StructureDefinition/JP_Specimen
+    - http://jpfhir.jp/fhir/core/StructureDefinition/jp-plandefinition-chemotherapyregimen-timingdaysofcycle
     - http://jpfhir.jp/fhir/core/ValueSet/JP_AllergyIntolerance_VS
+    - http://jpfhir.jp/fhir/core/ValueSet/JP_ChemotherapyRegimen_RegimenType_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConclusionCodesJed_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD10_VS
     - http://jpfhir.jp/fhir/core/ValueSet/JP_ConditionDiseaseCodeICD11_VS
